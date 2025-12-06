@@ -1,0 +1,240 @@
+/* import fonts from google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Pinyon+Script&display=swap');
+
+/* fonts  */
+.instrument-serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.pinyon-script-regular {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+}
+
+
+
+
+ /* spacing  */
+ .text-center{
+    text-align: center;
+ }
+
+/* header  */
+header {
+    width: 100%;
+    background-color: #153D70;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#brand {
+    flex-basis: 40%;
+}
+
+#brand>h1{ /* Selecting the child fo brand id */
+    margin:0;
+}
+
+nav {
+    flex-basis: 60%;
+}
+
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+
+/* Selecting the links */
+.nav-bar-link>a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-bar-link>a:hover{
+    color: rgb(45,13,80);
+}
+
+
+ /* footer */
+footer{
+    width: 100%;
+    background-color: #153D70;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#hours {
+    flex-basis: 40%;
+}
+
+#hours > h3,p{
+    margin: 0;
+}
+#social {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+
+/* home.html */
+#home-image{
+    width: 100%;
+}
+
+#home-message{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* contact.html */
+
+#main-contact{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contact-form{
+    background-color: #e3e6e8;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.form-input{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-submit{
+    background-color: #fafafa;
+    color: #153D70;
+    border: 1px solid #153D70;
+    padding: 5px 15px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.btn-submit:hover{
+    background-color: #153D70;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+
+/* Gallery  */
+.picture-card-left{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 60% 40%;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.picture-card-right{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.picture-left{
+    /* height: auto; */
+    grid-row:1 / span 3;
+    grid-column: 1 / 2;
+    border: 2px solid #000;
+    /* background-color: antiquewhite;
+     */
+}
+
+.picture-right{
+    height: auto;
+    grid-row:1 / span 3;
+    grid-column: 2 / 3;
+    border: 2px solid #000;
+    /* background-color: antiquewhite;
+     */
+}
+.picture-gallery{
+    width: 100%;
+}
+
+/* artist.html  */
+
+.artist{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 35px;
+}
+
+.artist-name{
+    flex: 25%;
+}
+.artist-bio{
+    flex: 70%;
+}
+
+
+/* responsive design */
+/* media query for small screens */
+@media screen and (max-width: 600px){
+    /* index.html */
+
+    /* gallery.html */
+    .picture-card-left , .picture-card-right{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mt-2{
+        margin-top: 2vh;
+    }
+
+    /* artist */
+    .artist{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artist-name, .artist-bio{
+        flex: 100%;
+    }
+
+    /* contact */
+    #main-contact{
+        flex-direction: column;
+    }
+
+}
